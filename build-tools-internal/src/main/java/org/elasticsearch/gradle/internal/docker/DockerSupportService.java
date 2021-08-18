@@ -77,7 +77,7 @@ public abstract class DockerSupportService implements BuildService<DockerSupport
                 // docker returns 0/success if the daemon is not running, so we need to check the
                 // output before continuing
                 if (lastResult.isSuccess() && dockerDaemonIsRunning(lastResultOutput)) {
-
+                    lastResultOutput = lastResultOutput.replace("+", "-");
                     version = Version.fromString(lastResultOutput, Version.Mode.RELAXED);
 
                     isVersionHighEnough = version.onOrAfter(MINIMUM_DOCKER_VERSION);
