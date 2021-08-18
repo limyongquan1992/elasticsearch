@@ -68,6 +68,6 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Verify JDK Home
-      run: echo $JAVA_HOME\ echo $RUNTIME_JAVA_HOME
+      run: echo $JAVA_HOME $RUNTIME_JAVA_HOME $JAVA15_HOME $JAVA14_HOME $JAVA13_HOME $JAVA12_HOME $JAVA11_HOME $JAVA10_HOME $JAVA9_HOME $JAVA8_HOME
     - name: Build with Gradle
       run: ./gradlew build
